@@ -12,6 +12,8 @@ export default function Schedule({scheduleTimeline}) {
                             flex flex-row items-start justify-center
                         ">
                             <div className="activity-item-content-wrapper">
+                                <img src={activity?.coverImage} alt="session-banner" 
+                                    className="mb-3 rounded-md" />
                                 <h1 className="activity-title leading-snug text-lg text-gray-800 font-semibold">
                                     {activity?.activityTitle}
                                 </h1>
@@ -23,13 +25,19 @@ export default function Schedule({scheduleTimeline}) {
                                 </p>
                                 <div className="calendar-schedule-details-wrapper mt-3 text-sm text-gray-500 font-normal
                                     flex flex-col items-start justify-start gap-1">
-                                <span className="calendar-schedule_date-wrapper">
-                                    {`on, ${activity?.calendar?.date} ${activity?.calendar?.month} ${activity?.calendar?.year}`}
+                                    <span className="calendar-schedule_date-wrapper">
+                                        {`on, ${activity?.calendar?.date} ${activity?.calendar?.month} ${activity?.calendar?.year}`}
+                                    </span>
+                                    <span className="calendar-schedule_timings-wrapper">
+                                        {`Time: ${activity?.calendar?.time?.hrs}:${activity?.calendar?.time?.mins} ${activity?.calendar?.time?.mrdn.toUpperCase()}`}
+                                    </span>
+                                </div>
+                                <div className="mt-4" />
+                                <span className={`rounded-full px-3 py-1 text-sm font-normal border
+                                    ${activity?.isDone ? 'bg-green-500 text-white border-transparent' : 'bg-white text-gray-500 border-gray-400'}
+                                `}>
+                                    {activity?.isDone ? "Completed" : "Upcoming"}
                                 </span>
-                                <span className="calendar-schedule_timings-wrapper">
-                                    {`Time: ${activity?.calendar?.time?.hrs}:${activity?.calendar?.time?.mins} ${activity?.calendar?.time?.mrdn.toUpperCase()}`}
-                                </span>
-                            </div>
                             </div>
                         </button>
                         
