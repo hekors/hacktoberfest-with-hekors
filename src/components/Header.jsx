@@ -26,10 +26,10 @@ export default function Header() {
                         </li>
                     ))}
                     <li className="header-option-item">
-                        <button className="px-3 py-1.5 rounded-full bg-gray-800 hover:bg-gray-700 text-sm text-white"
-                            onClick={() => window.open('https://github.com/hekors')}
+                        <button className="px-3 py-1.5 rounded shadow-md hover:shadow-none bg-gray-800 hover:bg-gray-700 text-sm text-white"
+                            onClick={() => window.open('http://hacktoberfest.com')}
                         >
-                            github
+                            {"hacktoberfest 2022"}
                         </button>
                     </li>
                 </ul>
