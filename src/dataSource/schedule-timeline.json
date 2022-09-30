@@ -3,11 +3,11 @@
         "activityTitle": "Understanding AsyncAPI Design Landscape",
         "coverImage": "https://ik.imagekit.io/eawrckp8wfi/hekors/hacktoberfest-session-banners/hacktoberfest-asyncapi-session_MvRVj6gaF.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664519986764",
         "calendar": {
-            "date": "30",
-            "month": "Sept",
+            "date": "12",
+            "month": "October",
             "year": "2022",
             "time": {
-                "hrs": "6",
+                "hrs": "5",
                 "mins": "30",
                 "mrdn": "pm"
             }
@@ -16,7 +16,7 @@
         "speaker": {
             "name": "Yash Sehgal",
             "github": "yashsehgal",
-            "website": "https://github.com/yashsehgal",
+            "website": "https://yashsehgal.com",
             "company": "AsyncAPI Initiative"
         },
         "description": "Having a deep dive into the Design Landscape of AsycnAPI",
