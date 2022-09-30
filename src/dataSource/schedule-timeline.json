@@ -24,57 +24,5 @@
             "isOnline": true,
             "meetingLink": "https://meet.google.com"
         }
-    },
-    {
-        "activityTitle": "Understanding AsyncAPI Design Landscape",
-        "coverImage": "https://ik.imagekit.io/eawrckp8wfi/hekors/hacktoberfest-session-banners/hacktoberfest-asyncapi-session_MvRVj6gaF.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664519986764",
-        "calendar": {
-            "date": "30",
-            "month": "Sept",
-            "year": "2022",
-            "time": {
-                "hrs": "6",
-                "mins": "30",
-                "mrdn": "pm"
-            }
-        },
-        "isDone": false,
-        "speaker": {
-            "name": "Yash Sehgal",
-            "github": "yashsehgal",
-            "website": "https://github.com/yashsehgal",
-            "company": "AsyncAPI Initiative"
-        },
-        "description": "Having a deep dive into the Design Landscape of AsycnAPI",
-        "venue": {
-            "isOnline": true,
-            "meetingLink": "https://meet.google.com"
-        }
-    },
-    {
-        "activityTitle": "Understanding AsyncAPI Design Landscape",
-        "coverImage": "https://ik.imagekit.io/eawrckp8wfi/hekors/hacktoberfest-session-banners/hacktoberfest-asyncapi-session_MvRVj6gaF.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664519986764",
-        "calendar": {
-            "date": "30",
-            "month": "Sept",
-            "year": "2022",
-            "time": {
-                "hrs": "6",
-                "mins": "30",
-                "mrdn": "pm"
-            }
-        },
-        "isDone": false,
-        "speaker": {
-            "name": "Yash Sehgal",
-            "github": "yashsehgal",
-            "website": "https://github.com/yashsehgal",
-            "company": "AsyncAPI Initiative"
-        },
-        "description": "Having a deep dive into the Design Landscape of AsycnAPI",
-        "venue": {
-            "isOnline": true,
-            "meetingLink": "https://meet.google.com"
-        }
     }
 ]
