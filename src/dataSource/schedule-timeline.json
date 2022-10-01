@@ -1,15 +1,120 @@
 [
     {
+        "activityTitle": "Hacktoberfest Kickoff",
+        "coverImage": "",
+        "calendar": {
+            "date": "",
+            "month": "",
+            "year": "",
+            "time": {
+                "hrs": "",
+                "mins": "",
+                "mrdn": ""
+            },
+            "calendarLink": ""
+        },
+        "speaker": {
+            "name": "Sujal Samai",
+            "website": "https://sujalsamai.netlify.app",
+            "github": "SujalSamai",
+            "company": {
+                "companyName": "HEKORS"
+            }
+        },
+        "description": "A clear introduction to the world of Open Source and Hacktoberfest",
+        "venue": {
+            "isOnline": true,
+            "meetingLink": "https://meet.google.com/tht-uzum-xtd"
+        }
+    },
+    {
+        "speaker": {
+            "name": "Ayush Soni"
+        },
+        "venue": {
+            "isOnline": true,
+            "meetingLink": ""
+        }
+    },
+    {
+        "activityTitle": "Contributing to invoicetor",
+        "coverImage": "https://ik.imagekit.io/eawrckp8wfi/hekors/hacktoberfest-session-banners/twitter-hacktoberfest-invoicetor-session_LZV89xYJbB.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664624120694",
+        "calendar": {
+            "date": "",
+            "month": "",
+            "year": "",
+            "time": {
+                "hrs": "",
+                "mins": "",
+                "mrdn": ""
+            },
+            "calendarLink": ""
+        },
+        "isDone": false,
+        "speaker": {
+            "name": "Sumit Singh",
+            "github": "wh0sumit",
+            "website": "",
+            "company": {
+                "companyName": "invoicetor.works",
+                "companyWebsite": "https://invoicetor.works"
+            }
+        },
+        "description": "",
+        "venue": {
+            "isOnline": true,
+            "meetingLink": ""
+        }
+    },
+    {
+        "activityTitle": "",
+        "coverImage": "",
+        "calendar": {
+            "date": "",
+            "month": "",
+            "year": "",
+            "time": {
+                "hrs": "",
+                "mins": "",
+                "mrdn": ""
+            },
+            "calendarLink": ""
+        },
+        "isDone": false,
+        "speaker": {
+            "name": "Utkarsh Chourasia",
+            "github": "",
+            "website": "https://www.utkarshchourasia.in/",
+            "company": {
+                "companyName": "HEKORS"
+            }
+        },
+        "description": "",
+        "venue": {
+            "isOnline": true,
+            "meetingLink": ""
+        }
+    },
+    {
+        "speaker": {
+            "name": "Atharva Gadkari"
+        },
+        "venue": {
+            "isOnline": true,
+            "meetingLink": ""
+        }
+    },
+    {
         "activityTitle": "Understanding AsyncAPI Design Landscape",
         "coverImage": "https://ik.imagekit.io/eawrckp8wfi/hekors/hacktoberfest-session-banners/hacktoberfest-asyncapi-session_MvRVj6gaF.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664519986764",
         "calendar": {
-            "date": "12",
-            "month": "October",
-            "year": "2022",
+            "date": "",
+            "month": "",
+            "year": "",
             "time": {
-                "hrs": "5",
-                "mins": "30",
-                "mrdn": "pm"
+                "hrs": "",
+                "mins": "",
+                "mrdn": ""
             },
             "calendarLink": ""
         },
@@ -26,7 +131,7 @@
         "description": "Having a deep dive into the Design Landscape of AsycnAPI",
         "venue": {
             "isOnline": true,
-            "meetingLink": "https://meet.google.com"
+            "meetingLink": ""
         }
     }
 ]

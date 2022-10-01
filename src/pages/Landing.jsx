@@ -19,18 +19,20 @@ export default function Landing() {
                     >
                         {"Join Discord"}
                     </button>
-                    <button className="px-4 py-3 rounded bg-white text-base border text-gray-800 border-gray-200" 
-                    >
-                        {"Schedule"}
-                    </button>
+                    <a href="#schedule">
+                        <button className="px-4 py-3 rounded bg-white text-base border text-gray-800 border-gray-200" 
+                        >
+                            {"Schedule"}
+                        </button>
+                    </a>
                     <button className="px-4 py-3 rounded bg-gray-800 text-base text-white"  
                     >
                         {"Sessions & Streams"}
                     </button>
                 </div>
             </div>
-            {/* <img src={HacktoberfestHekorsBanner} alt="hacktoberfest-hekors-banner"
-                className="mx-auto mt-32" /> */}
+            <img src={HacktoberfestHekorsBanner} alt="hacktoberfest-hekors-banner"
+                className="mx-auto mt-32" />
             <div className="mt-52">
                 <Schedule scheduleTimeline={ScheduleTimelineData} />
             </div>
