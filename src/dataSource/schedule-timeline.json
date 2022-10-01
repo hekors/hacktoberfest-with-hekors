@@ -10,14 +10,18 @@
                 "hrs": "5",
                 "mins": "30",
                 "mrdn": "pm"
-            }
+            },
+            "calendarLink": ""
         },
         "isDone": false,
         "speaker": {
             "name": "Yash Sehgal",
             "github": "yashsehgal",
             "website": "https://yashsehgal.com",
-            "company": "AsyncAPI Initiative"
+            "company": {
+                "companyName": "AsyncAPI Initiative",
+                "companyWebsite": "https://asyncapi.com"
+            }
         },
         "description": "Having a deep dive into the Design Landscape of AsycnAPI",
         "venue": {

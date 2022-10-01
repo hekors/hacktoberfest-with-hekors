@@ -2,6 +2,8 @@ import React, { useRef } from "react"
 import { useState } from "react";
 import ReactModal from "react-modal";
 
+ReactModal.setAppElement('#root');
+
 export default function Schedule({scheduleTimeline}) {
     const scheduleTimelineResponse = useRef(scheduleTimeline);
     const [activityDetailsModal, setActivityDetailsModal] = useState(false);
@@ -26,7 +28,7 @@ export default function Schedule({scheduleTimeline}) {
                                     {"by, "}
                                     <span className="font-semibold text-indigo-500">{activity?.speaker?.name}</span> 
                                     {" from "}
-                                    <span className="font-semibold text-indigo-500">{activity?.speaker?.company}</span>
+                                    <span className="font-semibold text-indigo-500">{activity?.speaker?.company?.companyName}</span>
                                 </p>
                                 <div className="calendar-schedule-details-wrapper mt-3 text-sm text-gray-500 font-normal
                                     flex flex-row items-start justify-start gap-1.5">
@@ -73,6 +75,10 @@ export default function Schedule({scheduleTimeline}) {
                                     width: 'fit-content',
                                     height: "fit-content",
                                     maxHeight: '520px',
+                                    paddingLeft: '4rem',
+                                    paddingRight: '2rem',
+                                    paddingTop: '1rem',
+                                    paddingBottom: '3rem',
                                     // centering content (horizontally)
                                     marginRight: 'auto',
                                     marginLeft: 'auto',
@@ -80,7 +86,7 @@ export default function Schedule({scheduleTimeline}) {
                                 }
                             }}
                         >
-                            <div className="close-button-layer mb-8">
+                            <div className="close-button-layer mb-6">
                                 <button className="close-button text-sm text-gray-500 font-normal hover:text-gray-600"
                                     onClick={() => setActivityDetailsModal(false)}
                                 >{"Close"}</button>
@@ -96,7 +102,7 @@ export default function Schedule({scheduleTimeline}) {
                                         {"by, "}
                                         <span className="font-semibold text-indigo-500">{activity?.speaker?.name}</span> 
                                         {" from "}
-                                        <span className="font-semibold text-indigo-500">{activity?.speaker?.company}</span>
+                                        <span className="font-semibold text-indigo-500">{activity?.speaker?.company?.companyName}</span>
                                     </p>
                                     <div className="calendar-schedule-details-wrapper mt-3 text-sm text-gray-500 font-normal
                                         flex flex-row items-center justify-start gap-2">
@@ -124,7 +130,7 @@ export default function Schedule({scheduleTimeline}) {
                                         {activity?.isDone ? "Completed" : "Upcoming"}
                                     </span>
                                 </div>
-                                <div className="activity-item-more-details-content-wrapper pr-12 w-full">
+                                <div className="activity-item-more-details-content-wrapper pr-12">
                                     <h1 className="leading-snug text-2xl text-gray-800 font-semibold">Session Details</h1>
                                     <span className="venue-details-wrapper flex flex-col items-start justify-start gap-2 mt-4">
                                         <span className="text-xs text-gray-400 font-normal">{"Venue"}</span>
@@ -141,15 +147,52 @@ export default function Schedule({scheduleTimeline}) {
                                             : <span className="description-not-added-text text-sm text-gray-300 select-none cursor-default">No description found</span>
                                         }
                                         {activity?.venue?.isOnline && activity?.venue?.meetingLink
-                                            ? <div className="joining-meeting-link-wrapper">
-                                                <span className="text-gray-600 text-xs font-normal">{"Join here: "}</span>
-                                                <a href={activity?.venue?.meetingLink} ref="noreferrer" target="_blank">
+                                            ? <div className="joining-meeting-link-wrapper mt-2">
+                                                <span className="text-gray-600 text-sm font-normal">{"Join here: "}</span>
+                                                <a href={activity?.venue?.meetingLink} rel="noreferrer" target="_blank"
+                                                    className="text-sm text-blue-500"
+                                                >
                                                     {activity?.venue?.meetingLink}
                                                 </a>
                                             </div>
                                             : <React.Fragment></React.Fragment>
                                         }
+                                        {activity?.speaker && activity?.speaker?.name
+                                            ? <div className="speaker-details-content-wrapper mt-4 flex flex-col items-start gap-2 justify-start w-fit h-fit">
+                                                <h1 className="leading-snug text-xs text-gray-400">{"Speaker Details"}</h1>
+                                                <span className={'rounded-full px-3 py-1 w-fit text-sm font-normal border bg-white text-gray-500 border-gray-400'}>
+                                                    {activity?.speaker?.name}
+                                                </span>
+                                                {activity?.speaker?.github
+                                                    ? <a href={`https://github.com/${activity?.speaker?.github}`} target="_blank" rel="noreferrer" className="w-fit text-sm text-blue-500">
+                                                        {"GitHub at " + activity?.speaker?.github}
+                                                    </a>
+                                                    : <React.Fragment></React.Fragment>
+                                                }
+                                                {activity?.speaker?.website
+                                                    ? <a href={activity?.speaker?.website} target="_blank" rel="noreferrer" className="w-fit text-sm text-blue-500">
+                                                        {"Personal Website"}
+                                                    </a>
+                                                    : <React.Fragment></React.Fragment>
+                                                }
+                                                {activity?.speaker?.company && activity?.speaker?.company?.companyName && activity?.speaker?.company?.companyWebsite
+                                                        ? <a href={activity?.speaker?.company?.companyWebsite} target="_blank" rel="noreferrer"
+                                                            className="w-fit text-sm text-blue-500">
+                                                                {"Working at " + activity?.speaker?.company?.companyName}
+                                                        </a>
+                                                    : <React.Fragment></React.Fragment>
+                                                }
+                                            </div>
+                                            : <React.Fragment></React.Fragment>
+                                        }
                                     </div>
+                                    {activity?.calendar?.calendarLink
+                                        ? <button className="add-to-calendar-button mt-4 px-4 py-2 rounded-md bg-indigo-500 text-white font-semibold"
+                                            onClick={() => window.open(activity?.calendar?.calendarLink)}>
+                                            {"Add to Calendar"}
+                                        </button>
+                                        : <React.Fragment></React.Fragment>
+                                    }
                                 </div>
                             </div>
                         </ReactModal>
