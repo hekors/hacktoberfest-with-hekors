@@ -10,12 +10,31 @@ export default function Schedule({scheduleTimeline}) {
     return (
         <section className="schedule-container" id="schedule">
             <h1 className="leading-snug text-3xl text-gray-700 font-semibold text-center">Hacktoberfest Month Schedule</h1>
-            <div className="schedule-timeline-wrapper mt-12 w-fit h-auto grid grid-cols-2 gap-8 mx-auto items-start justify-start">
+            <div className="schedule-timeline-wrapper mt-12 w-fit h-auto grid grid-cols-2 gap-8 mx-auto items-stretch justify-start">
                 {scheduleTimelineResponse.current?.map((activityItem, activityIndex) => (
                     <ActivityCard key={activityIndex} 
                         activity={activityItem}
                     />
                 ))}
+                <div className="add-new-session-cta-card-container w-[420px]bg-white hover:bg-gray-100 border text-left border-gray-300 w-[420px] h-auto py-6 px-4
+                    flex flex-row items-center justify-center">
+                        <span className="text-center">
+                            <h1 className="leading-snug text-lg text-gray-800 font-semibold">
+                                {"Want to take a session at HEKORS?"}
+                            </h1>
+                            <p className="leading-snug mt-2 text-sm text-gray-500 font-normal">
+                                Then make sure you join our discord server and reach our to the community members or just say {" "}
+                                <span className="text-blue-500 font-semibold">Hi!</span> in the {" "}
+                                <span className="text-blue-500 font-semibold">#hacktoberfest-speakers</span> channel {" "}
+                                <p className="mt-2">{"We would love to have your onboard! 🚀"}</p>
+                            </p>
+                            <button className="px-3 py-2 mt-4 rounded bg-indigo-500 text-base text-white"
+                                onClick={() => window.open('https://discord.gg/muKCDkmGEX')}
+                            >
+                                {"Jump in to Discord ✨"}
+                            </button>
+                        </span>
+                </div>
             </div>
         </section>
     )
@@ -27,7 +46,7 @@ function ActivityCard({activity}) {
 
     return (
         <React.Fragment>
-            <button className="activity-item-button bg-white border text-left border-gray-300 w-[420px] h-auto py-6 px-4
+            <button className="activity-item-button bg-white hover:bg-gray-100 border text-left border-gray-300 w-[420px] h-auto py-6 px-4
                 flex flex-row items-start justify-center"
                     onClick={() => setActivityDetailsModal(true)}
                 >

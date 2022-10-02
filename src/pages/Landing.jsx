@@ -31,8 +31,8 @@ export default function Landing() {
                     </button>
                 </div>
             </div>
-            <img src={HacktoberfestHekorsBanner} alt="hacktoberfest-hekors-banner"
-                className="mx-auto mt-32" />
+            {/* <img src={HacktoberfestHekorsBanner} alt="hacktoberfest-hekors-banner"
+                className="mx-auto mt-32" /> */}
             <div className="mt-52">
                 <Schedule scheduleTimeline={ScheduleTimelineData} />
             </div>
