@@ -42,7 +42,13 @@
             "calendarLink": ""
         },
         "speaker": {
-            "name": "Ayush Soni"
+            "name": "Ayush Soni",
+            "website": "",
+            "github": "ayushsoni1010",
+            "company": {
+                "companyName": "economize.cloud",
+                "companyWebsite": "https://economize.cloud"
+            }
         },
         "venue": {
             "isOnline": true,
