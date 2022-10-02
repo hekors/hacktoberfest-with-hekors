@@ -12,14 +12,14 @@ export default function Schedule({ scheduleTimeline }) {
       <h1 className="text-3xl font-semibold leading-snug text-center text-gray-700">
         Hacktoberfest Month Schedule
       </h1>
-      <div className="grid items-stretch justify-start h-auto grid-cols-2 gap-8 mx-auto mt-12 schedule-timeline-wrapper w-fit">
+      <div className="grid items-stretch justify-start h-auto grid-rows-2 sm:grid-cols-2 gap-8 mx-auto mt-12 schedule-timeline-wrapper w-fit">
         {scheduleTimelineResponse.current?.map(
           (activityItem, activityIndex) => (
             <ActivityCard key={activityIndex} activity={activityItem} />
           )
         )}
         <div
-          className="add-new-session-cta-card-container w-[420px]bg-white hover:bg-gray-100 border text-left border-gray-300 w-[420px] h-auto py-6 px-4
+          className="add-new-session-cta-card-container w-full sm:w-[360px] bg-white hover:bg-gray-100 border text-left border-gray-300 h-auto py-6 px-4
                     flex flex-row items-center justify-center"
         >
           <span className="text-center">
@@ -55,15 +55,15 @@ function ActivityCard({ activity }) {
   return (
     <React.Fragment>
       <button
-        className="activity-item-button bg-white hover:bg-gray-100 border text-left border-gray-300 w-[420px] h-auto py-6 px-4
-                flex flex-row items-start justify-center"
+        className="activity-item-button bg-white hover:bg-gray-100 border text-left 
+        border-gray-300 w-full sm:w-[360px] h-auto py-4 px-2 sm:py-6 sm:px-4 flex flex-row items-start justify-start sm:justify-space-between"
         onClick={() => setActivityDetailsModal(true)}
       >
         <div className="activity-item-content-wrapper">
           <img
             src={activity?.coverImage}
             alt="session-banner"
-            className="mb-3 rounded-md"
+            className="mb-3 rounded-md w-full sm:w-[420px]"
           />
           <h1 className="text-lg font-semibold leading-snug text-gray-800 activity-title">
             {activity?.activityTitle}
@@ -134,7 +134,8 @@ function ActivityCard({ activity }) {
             background: "white",
             borderColor: "transparent",
             boxShadow: "0px 0px 6px rgba(0, 0, 0, 0.360)",
-            width: "fit-content",
+            // width: "fit-content",
+            width: "80%",
             height: "fit-content",
             maxHeight: "520px",
             paddingLeft: "4rem",
@@ -144,8 +145,8 @@ function ActivityCard({ activity }) {
             // centering content (horizontally)
             marginRight: "auto",
             marginLeft: "auto",
-            marginTop: "4rem",
-          },
+            marginTop: "2rem",
+          },  
         }}
       >
         <div className="mb-6 close-button-layer">
@@ -161,7 +162,7 @@ function ActivityCard({ activity }) {
             <img
               src={activity?.coverImage}
               alt="session-banner"
-              className="mb-3 rounded-md w-[560px]"
+              className="mb-3 rounded-md w-full sm:w-[560px]"
             />
             <h1 className="text-lg font-semibold leading-snug text-gray-800 activity-title">
               {activity?.activityTitle}
@@ -351,7 +352,7 @@ function ActivityCard({ activity }) {
                                 <span className="calendar-schedule_date-wrapper">
                                     {`on, ${activity?.calendar?.date} ${activity?.calendar?.month} ${activity?.calendar?.year}`}
                                 </span>
-                                <span className="calendar-schedule_timings-wrapper">
+                                 <span className="calendar-schedule_timings-wrapper">
                                     {`Time: ${activity?.calendar?.time?.hrs} ${activity?.calendar?.time?.mins} ${activity?.calendar?.time?.mrdn.toUpperCase()}`}
                                 </span>
                             </div> */
