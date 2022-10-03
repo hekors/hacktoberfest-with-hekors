@@ -5,12 +5,12 @@ import HacktoberfestHekorsBanner from '../lib/hacktoberfest-hekors-banner.png';
 
 export default function Landing() {
     return (
-        <section className="landing-page-container">
-            <div className="hero-section mt-36">
-                <h1 className="leading-snug text-5xl font-bold text-center w-[680px] mx-auto">
+        <section className="landing-page-container sm: flex flex-col ">
+            <div className="hero-section mt-36 sm: mt-24 flex flex-col flex-wrap">
+                <h1 className="leading-snug text-5xl font-bold text-center w-[680px] mx-auto sm: my-4 ">
                     {"Advocating Open Source this October with Hacktoberfest"}
                 </h1>
-                <p className="leading-snug text-sm text-gray-400 text-center mx-auto font-normal mt-4">
+                <p className="leading-snug text-sm text-gray-400 text-center mx-auto font-normal mt-4 sm: text-center text-base my-4">
                     {"We this year, are actively advocating open source & spreading open source knowledge"}
                 </p>
                 <div className="cta-buttons-layer-container flex flex-row items-center jusitfy-center font-mono gap-3 w-fit mx-auto h-auto mt-6">

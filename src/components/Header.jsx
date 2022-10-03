@@ -6,7 +6,7 @@ import LogoImage from '../lib/logo.png';
 export default function Header() {
     const headerOptionsDataRef = useRef(HeaderOptions);
     return (
-        <div className="header-component flex flex-row items-center justify-between py-4">
+        <div className="header-component flex flex-row items-center justify-between py-4 sm: justify-around">
             <span className="name-logo-wrapper">
                 <Link to="/">
                     <img src={LogoImage} 
