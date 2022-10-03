@@ -3,13 +3,13 @@
         "activityTitle": "Hacktoberfest Kickoff",
         "coverImage": "https://ik.imagekit.io/eawrckp8wfi/hekors/hacktoberfest-session-banners/twitter-hacktoberfest-session_rHOmPQwdu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664729859283",
         "calendar": {
-            "date": "",
-            "month": "",
-            "year": "",
+            "date": "6",
+            "month": "October",
+            "year": "2022",
             "time": {
-                "hrs": "",
-                "mins": "",
-                "mrdn": ""
+                "hrs": "6",
+                "mins": "00",
+                "mrdn": "PM"
             },
             "calendarLink": ""
         },
@@ -24,7 +24,7 @@
         "description": "A clear introduction to the world of Open Source and Hacktoberfest",
         "venue": {
             "isOnline": true,
-            "meetingLink": "https://meet.google.com/tht-uzum-xtd"
+            "meetingLink": ""
         }
     },
     {
