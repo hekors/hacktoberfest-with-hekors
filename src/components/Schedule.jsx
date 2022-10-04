@@ -242,7 +242,7 @@ function ActivityCard({activity}) {
                             : <React.Fragment></React.Fragment>
                         }
                         {activity?.registrations?.isOpen
-                            ? <button className="add-to-calendar-button mt-4 px-4 py-2 rounded-md bg-indigo-500 text-white font-semibold"
+                            ? <button className="add-to-calendar-button w-full mt-6 px-4 py-2 rounded-md bg-indigo-500 text-white font-semibold"
                                 onClick={() => window.open(activity?.registrations?.rsvpLink)}>
                                 {"RSVP 🚀"}
                             </button>
