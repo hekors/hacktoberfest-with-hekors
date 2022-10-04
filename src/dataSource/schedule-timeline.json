@@ -25,6 +25,10 @@
         "venue": {
             "isOnline": true,
             "meetingLink": ""
+        },
+        "registrations": {
+            "isOpen": true,
+            "rsvpLink": "https://forms.gle/X3UPcGXWMD1eBgXH7"
         }
     },
     {

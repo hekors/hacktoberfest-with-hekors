@@ -82,11 +82,19 @@ function ActivityCard({activity}) {
                         }
                     </div>
                     <div className="mt-4" />
-                    <span className={`rounded-full px-3 py-1 text-sm font-normal border
-                        ${activity?.isDone ? 'bg-green-500 text-white border-transparent' : 'bg-white text-gray-500 border-gray-400'}
-                    `}>
-                        {activity?.isDone ? "Completed" : "Upcoming"}
-                    </span>
+                    <div className="flex flex-row items-center justify-start gap-1.5">
+                        <span className={`rounded-full px-3 py-1 text-sm font-normal border
+                            ${activity?.isDone ? 'bg-green-500 text-white border-transparent' : 'bg-white text-gray-500 border-gray-400'}
+                        `}>
+                            {activity?.isDone ? "Completed" : "Upcoming"}
+                        </span>
+                        {activity?.registrations?.isOpen
+                            ? <span className="rsvp-status-tag text-xs bg-blue-500 text-white border border-transparent font-normal px-3 py-1 rounded-full">
+                                {"RSVP Open"}
+                            </span>
+                            : <React.Fragment></React.Fragment>
+                        }
+                    </div>
                 </div>
             </button>
             <ReactModal
@@ -156,11 +164,19 @@ function ActivityCard({activity}) {
                             }
                         </div>
                         <div className="mt-4" />
+                        <div className="flex flex-row items-center justify-start gap-1.5">
                         <span className={`rounded-full px-3 py-1 text-sm font-normal border
                             ${activity?.isDone ? 'bg-green-500 text-white border-transparent' : 'bg-white text-gray-500 border-gray-400'}
                         `}>
                             {activity?.isDone ? "Completed" : "Upcoming"}
                         </span>
+                        {activity?.registrations?.isOpen
+                            ? <span className="rsvp-status-tag text-xs bg-blue-500 text-white border border-transparent font-normal px-3 py-1 rounded-full">
+                                {"RSVP Open"}
+                            </span>
+                            : <React.Fragment></React.Fragment>
+                        }
+                    </div>
                     </div>
                     <div className="activity-item-more-details-content-wrapper pr-12">
                         <h1 className="leading-snug text-2xl text-gray-800 font-semibold">Session Details</h1>
@@ -222,6 +238,13 @@ function ActivityCard({activity}) {
                             ? <button className="add-to-calendar-button mt-4 px-4 py-2 rounded-md bg-indigo-500 text-white font-semibold"
                                 onClick={() => window.open(activity?.venue?.meetingLink)}>
                                 {"Join the session"}
+                            </button>
+                            : <React.Fragment></React.Fragment>
+                        }
+                        {activity?.registrations?.isOpen
+                            ? <button className="add-to-calendar-button mt-4 px-4 py-2 rounded-md bg-indigo-500 text-white font-semibold"
+                                onClick={() => window.open(activity?.registrations?.rsvpLink)}>
+                                {"RSVP 🚀"}
                             </button>
                             : <React.Fragment></React.Fragment>
                         }
