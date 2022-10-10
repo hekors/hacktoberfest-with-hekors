@@ -6,15 +6,15 @@ import LogoImage from '../lib/logo.png';
 export default function Header() {
     const headerOptionsDataRef = useRef(HeaderOptions);
     return (
-        <div className="header-component flex flex-row items-center justify-between py-4">
-            <span className="name-logo-wrapper">
+        <div className="header-component flex flex-row items-center justify-between py-4 md:p-0 p-4 sm:m-4 m-0 ">
+            <span className="w-16 md:w-32 lg:w-48 name-logo-wrapper">
                 <Link to="/">
                     <img src={LogoImage} 
                         alt="logo" 
                         className="w-[180px] h-auto" />
                 </Link>
             </span>
-            <span className="header-options-list-wrapper w-fit h-auto">
+            <span className="w-16 md:w-32 lg:w-48 header-options-list-wrapper w-fit h-auto">
                 <ul className="header-options-list flex flex-row items-center justify-end gap-5 w-fit h-auto">
                     {headerOptionsDataRef.current?.map((option, optionIndex) => (
                         <li className="header-option-item text-sm text-gray-500 hover:text-gray-600" 

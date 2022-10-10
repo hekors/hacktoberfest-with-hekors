@@ -10,31 +10,40 @@ export default function Schedule({scheduleTimeline}) {
     return (
         <section className="schedule-container" id="schedule">
             <h1 className="leading-snug text-3xl text-gray-700 font-semibold text-center">Hacktoberfest Month Schedule</h1>
-            <div className="schedule-timeline-wrapper mt-12 w-fit h-auto grid grid-cols-2 gap-8 mx-auto items-stretch justify-start">
+            {/* <div className="schedule-timeline-wrapper mt-12 w-fit h-auto grid grid-cols-2 gap-8 mx-auto items-stretch justify-start"> */}
+      <div className="grid items-stretch justify-start h-auto grid-rows-2 sm:grid-cols-2 gap-8 mx-auto mt-12 schedule-timeline-wrapper w-full">
+
                 {scheduleTimelineResponse.current?.map((activityItem, activityIndex) => (
                     <ActivityCard key={activityIndex} 
                         activity={activityItem}
                     />
                 ))}
-                <div className="add-new-session-cta-card-container w-[420px]bg-white hover:bg-gray-100 border text-left border-gray-300 w-[420px] h-auto py-6 px-4
-                    flex flex-row items-center justify-center">
-                        <span className="text-center">
-                            <h1 className="leading-snug text-lg text-gray-800 font-semibold">
-                                {"Want to take a session at HEKORS?"}
-                            </h1>
-                            <p className="leading-snug mt-2 text-sm text-gray-500 font-normal">
-                                Then make sure you join our discord server and reach our to the community members or just say {" "}
-                                <span className="text-blue-500 font-semibold">Hi!</span> in the {" "}
-                                <span className="text-blue-500 font-semibold">#hacktoberfest-speakers</span> channel {" "}
-                                <p className="mt-2">{"We would love to have your onboard! 🚀"}</p>
-                            </p>
-                            <button className="px-3 py-2 mt-4 rounded bg-indigo-500 text-base text-white"
-                                onClick={() => window.open('https://discord.gg/muKCDkmGEX')}
-                            >
-                                {"Jump in to Discord ✨"}
-                            </button>
-                        </span>
-                </div>
+               <div
+          className="add-new-session-cta-card-container w-full sm:w-[360px] bg-white hover:bg-gray-100 border text-left border-gray-300 h-auto py-6 px-4
+                    flex flex-row items-center justify-center"
+        >
+          <span className="text-center">
+            <h1 className="text-lg font-semibold leading-snug text-gray-800">
+              {"Want to take a session at HEKORS?"}
+            </h1>
+            <p className="mt-2 text-sm font-normal leading-snug text-gray-500">
+              Then make sure you join our discord server and reach our to the
+              community members or just say{" "}
+              <span className="font-semibold text-blue-500">Hi!</span> in the{" "}
+              <span className="font-semibold text-blue-500">
+                #hacktoberfest-speakers
+              </span>{" "}
+              channel{" "}
+              <p className="mt-2">{"We would love to have your onboard! 🚀"}</p>
+            </p>
+            <button
+              className="px-3 py-2 mt-4 text-base text-white bg-indigo-500 rounded"
+              onClick={() => window.open("https://discord.gg/muKCDkmGEX")}
+            >
+              {"Jump in to Discord ✨"}
+            </button>
+          </span>
+        </div>
             </div>
         </section>
     )
@@ -46,21 +55,26 @@ function ActivityCard({activity}) {
 
     return (
         <React.Fragment>
-            <button className="activity-item-button bg-white hover:bg-gray-100 border text-left border-gray-300 w-[420px] h-auto py-6 px-4
-                flex flex-row items-start justify-center"
-                    onClick={() => setActivityDetailsModal(true)}
+            <button className="activity-item-button hover:bg-gray-100 border text-left 
+                border-gray-300 w-full sm:w-[360px] h-auto py-4 px-2 sm:py-6 sm:px-4 flex flex-row 
+                items-start justify-start sm:justify-space-between"
+                onClick={() => setActivityDetailsModal(true)}
                 >
                 <div className="activity-item-content-wrapper">
                     <img src={activity?.coverImage} alt="session-banner" 
-                        className="mb-3 rounded-md" />
-                    <h1 className="activity-title leading-snug text-lg text-gray-800 font-semibold">
-                        {activity?.activityTitle}
+                          className="mb-3 rounded-md w-full sm:w-[420px]" />
+                    <h1 className="text-lg font-semibold leading-snug text-gray-800 activity-title">
+                      {activity?.activityTitle}
                     </h1>
-                    <p className="speaker-information text-sm font-normal text-gray-500">
-                        {"by, "}
-                        <span className="font-semibold text-indigo-500">{activity?.speaker?.name}</span> 
-                        {" from "}
-                        <span className="font-semibold text-indigo-500">{activity?.speaker?.company?.companyName}</span>
+                    <p className="text-sm font-normal text-gray-500 speaker-information">
+                      {"by, "}
+                      <span className="font-semibold text-indigo-500">
+                        {activity?.speaker?.name}
+                      </span>
+                      {" from "}
+                      <span className="font-semibold text-indigo-500">
+                        {activity?.speaker?.company?.companyName}
+                      </span>
                     </p>
                     <div className="calendar-schedule-details-wrapper mt-3 text-sm text-gray-500 font-normal
                         flex flex-row items-start justify-start gap-1.5">
@@ -109,20 +123,21 @@ function ActivityCard({activity}) {
                         filter: 'blur(80%)'
                     },
                     content: {
-                        background: 'white',
-                        borderColor: 'transparent',
-                        boxShadow: '0px 0px 6px rgba(0, 0, 0, 0.360)',
-                        width: 'fit-content',
+                        background: "white",
+                        borderColor: "transparent",
+                        boxShadow: "0px 0px 6px rgba(0, 0, 0, 0.360)",
+                        // width: "fit-content",
+                        width: "80%",
                         height: "fit-content",
-                        maxHeight: '520px',
-                        paddingLeft: '4rem',
-                        paddingRight: '2rem',
-                        paddingTop: '1rem',
-                        paddingBottom: '3rem',
+                        maxHeight: "520px",
+                        paddingLeft: "4rem",
+                        paddingRight: "2rem",
+                        paddingTop: "1rem",
+                        paddingBottom: "3rem",
                         // centering content (horizontally)
-                        marginRight: 'auto',
-                        marginLeft: 'auto',
-                        marginTop: '4rem'
+                        marginRight: "auto",
+                        marginLeft: "auto",
+                        marginTop: "2rem",
                     }
                 }}
             >
@@ -134,7 +149,7 @@ function ActivityCard({activity}) {
             <div className="activity-item-modal-innerContent-container flex flex-row items-start justify-start gap-12">
                 <div className="activity-item-content-wrapper">
                         <img src={activity?.coverImage} alt="session-banner" 
-                            className="mb-3 rounded-md w-[560px]" />
+                                          className="mb-3 rounded-md w-full sm:w-[560px]" />
                         <h1 className="activity-title leading-snug text-lg text-gray-800 font-semibold">
                             {activity?.activityTitle}
                         </h1>
