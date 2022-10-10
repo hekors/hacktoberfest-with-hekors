@@ -13,6 +13,7 @@
             },
             "calendarLink": ""
         },
+        "isDone": true,
         "speaker": {
             "name": "Sujal Samai",
             "website": "https://sujalsamai.netlify.app",
@@ -27,21 +28,21 @@
             "meetingLink": ""
         },
         "registrations": {
-            "isOpen": true,
+            "isOpen": false,
             "rsvpLink": "https://forms.gle/X3UPcGXWMD1eBgXH7"
         }
     },
     {
         "activityTitle": "Understanding Git & GitHub",
-        "coverImage": "https://ik.imagekit.io/eawrckp8wfi/hekors/hacktoberfest-session-banners/twitter-hacktoberfest-asyncapi-session_Mn95GKlJI.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664726407781",
+        "coverImage": "https://ik.imagekit.io/eawrckp8wfi/hekors/hacktoberfest-session-banners/twitter-hacktoberfest-github-session_Ban1Icghg.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665320469859",
         "calendar": {
-            "date": "",
-            "month": "",
-            "year": "",
+            "date": "15",
+            "month": "October",
+            "year": "2022",
             "time": {
-                "hrs": "",
-                "mins": "",
-                "mrdn": ""
+                "hrs": "8",
+                "mins": "30",
+                "mrdn": "PM"
             },
             "calendarLink": ""
         },
@@ -54,9 +55,14 @@
                 "companyWebsite": "https://economize.cloud"
             }
         },
+        "description": "Covering everything from the basics of Git & GitHub with hands-on activities",
         "venue": {
             "isOnline": true,
-            "meetingLink": ""
+            "meetingLink": "https://meet.google.com/gpu-xhxr-mjf"
+        },
+        "registrations": {
+            "isOpen": true,
+            "rsvpLink": "https://forms.gle/BV6K3UPxkZ3n7LVH7"
         }
     },
     {
