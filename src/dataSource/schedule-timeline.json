@@ -3,13 +3,13 @@
         "activityTitle": "Hacktoberfest Kickoff",
         "coverImage": "https://ik.imagekit.io/eawrckp8wfi/hekors/hacktoberfest-session-banners/twitter-hacktoberfest-session_rHOmPQwdu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664729859283",
         "calendar": {
-            "date": "",
-            "month": "",
-            "year": "",
+            "date": "6",
+            "month": "October",
+            "year": "2022",
             "time": {
-                "hrs": "",
-                "mins": "",
-                "mrdn": ""
+                "hrs": "6",
+                "mins": "00",
+                "mrdn": "PM"
             },
             "calendarLink": ""
         },
@@ -24,7 +24,11 @@
         "description": "A clear introduction to the world of Open Source and Hacktoberfest",
         "venue": {
             "isOnline": true,
-            "meetingLink": "https://meet.google.com/tht-uzum-xtd"
+            "meetingLink": ""
+        },
+        "registrations": {
+            "isOpen": true,
+            "rsvpLink": "https://forms.gle/X3UPcGXWMD1eBgXH7"
         }
     },
     {
@@ -102,13 +106,41 @@
         "isDone": false,
         "speaker": {
             "name": "Utkarsh Chourasia",
-            "github": "",
+            "github": "JammUtkarsh",
             "website": "https://www.utkarshchourasia.in/",
             "company": {
                 "companyName": "HEKORS"
             }
         },
         "description": "",
+        "venue": {
+            "isOnline": true,
+            "meetingLink": ""
+        }
+    },
+    {
+        "activityTitle": "Open Source with Postman",
+        "coverImage": "https://ik.imagekit.io/eawrckp8wfi/hekors/hacktoberfest-session-banners/twitter-hacktoberfest-postman-session_JGb_x8pu2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664868153813",
+        "calendar": {
+            "date": "",
+            "month": "",
+            "year": "",
+            "time": {
+                "hrs": "",
+                "mins": "",
+                "mrdn": ""
+            },
+            "calendarLink": ""
+        },
+        "isDone": false,
+        "speaker": {
+            "name": "Atharva Gadkari",
+            "github": "atharvagadkari05",
+            "company": {
+                "companyName": "HEKORS"
+            }
+        },
+        "description": "Covering the open source landscape of Postman",
         "venue": {
             "isOnline": true,
             "meetingLink": ""
