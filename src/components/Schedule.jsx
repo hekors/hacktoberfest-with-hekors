@@ -27,7 +27,7 @@ export default function Schedule({scheduleTimeline}) {
               {"Want to take a session at HEKORS?"}
             </h1>
             <p className="mt-2 text-sm font-normal leading-snug text-gray-500">
-              Then make sure you join our discord server and reach our to the
+              Then make sure you join our discord server and reach out to the
               community members or just say{" "}
               <span className="font-semibold text-blue-500">Hi!</span> in the{" "}
               <span className="font-semibold text-blue-500">
