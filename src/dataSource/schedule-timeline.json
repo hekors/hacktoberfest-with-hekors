@@ -46,7 +46,6 @@
             },
             "calendarLink": ""
         },
-        "isDone": true,
         "speaker": {
             "name": "Ayush Soni",
             "website": "",
@@ -62,7 +61,7 @@
             "meetingLink": "https://meet.google.com/gpu-xhxr-mjf"
         },
         "registrations": {
-            "isOpen": false,
+            "isOpen": true,
             "rsvpLink": "https://forms.gle/BV6K3UPxkZ3n7LVH7"
         }
     },
