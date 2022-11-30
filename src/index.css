@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    @apply mx-auto mb-36;
-    max-width: 1000px;
-  }
   
   .page-container {
     @apply mt-12;
